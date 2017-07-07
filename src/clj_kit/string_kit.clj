@@ -1,13 +1,13 @@
 (ns clj-kit.string-kit)
 
-(defn is-alpha?
+(defn is-only-alpha?
   [st]
-  (->> (map #(Character/isLetter %) st)
-       (every? true?)))
-
-(defn is-non-alpha?
-  [st]
-  (not (is-alpha? st)))
+  (cond
+   (nil? st) false
+   (empty? st) false
+   :else
+   (->> (map #(Character/isLetter %) st)
+        (every? true?))))
 
 (defn is-lower?
   [st]
@@ -29,7 +29,7 @@
   [st]
   (try
     (when (Double/parseDouble st) true)
-     (catch NumberFormatException e false)))
+    (catch NumberFormatException e false)))
 
 (defn contains-alpha?
   [st]
