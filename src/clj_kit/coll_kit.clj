@@ -59,3 +59,11 @@
 (defn select-random
   [coll number]
   (select-random-rec coll '() number))
+
+(defn rand-nth-keys
+  [coll]
+  (rand-nth (keys coll)))
+
+(defn rand-nth-values
+  [coll]
+  (coll (rand-nth-keys coll)))
