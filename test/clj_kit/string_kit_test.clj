@@ -3,7 +3,7 @@
             [clj-kit.string-kit :refer :all]))
 
 (deftest is-only-alpha?-test
-  (testing "is-alpha?"
+  (testing "is-only-alpha?"
     (are [x y] (= x (is-only-alpha? y))
       true "a"
       false "ab1"
@@ -11,34 +11,57 @@
       false ""
       false nil)))
 
-;; (defn is-non-alpha?
-;;   [st]
-;;   (not (is-alpha? st)))
+(deftest contains-alpha?-test
+  (testing "contains-alpha?"
+    (are [x y] (= x (contains-alpha? y))
+      true "a"
+      true "ab1"
+      true "test"
+      false "1"
+      false ""
+      false nil)))
 
-;; (defn is-lower?
-;;   [st]
-;;   (->> (map #(Character/isLowerCase %) st)
-;;        (every? true?)))
+(deftest is-lower?-test
+  (testing "is-lower?"
+    (are [x y] (= x (is-lower? y))
+         true "a"
+         false "A"
+         true "abcd"
+         false "abCd"
+         false "ABCD"
+         false ""
+         false nil)))
 
-;; (defn is-upper?
-;;   [st]
-;;   (->> (map #(if (Character/isLetter %) (Character/isUpperCase %) true) st)
-;;        (every? true?)))
+(deftest is-upper?-test
+  (testing "is-upper?"
+    (are [x y] (= x (is-upper? y))
+         false "a"
+         true "A"
+         false "abcd"
+         false "abCd"
+         true "ABCD"
+         false ""
+         false nil)))
 
-;; (defn is-integer?
-;;   [st]
-;;   (try
-;;     (when (Integer/parseInt st) true)
-;;     (catch NumberFormatException e false)))
+(deftest is-integer?-test
+  (testing "is-integer?"
+    (are [x y] (= x (is-integer? y))
+         false "a"
+         true "0"
+         true "1"
+         true "-1"
+         false "1.0"
+         false ""
+         false nil)))
 
-;; (defn is-double?
-;;   [st]
-;;   (try
-;;     (when (Double/parseDouble st) true)
-;;      (catch NumberFormatException e false)))
-
-;; (defn contains-alpha?
-;;   [st]
-;;   (->> (map #(Character/isLetter %) st)
-;;        (some true?)))
+(deftest is-double?-test
+  (testing "is-double?"
+    (are [x y] (= x (is-double? y))
+         false "a"
+         true "0"
+         true "1"
+         true "-1"
+         true "1.0"
+         false ""
+         false nil)))
 
