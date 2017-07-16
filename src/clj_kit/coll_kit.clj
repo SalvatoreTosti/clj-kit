@@ -1,5 +1,13 @@
 (ns clj-kit.coll-kit)
 
+(defn coll-contains?
+  [coll item]
+  (cond
+   (list? coll) (not (neg? (.indexOf coll item)))
+   (vector? coll) (not (neg? (.indexOf coll item)))
+  :else
+  (contains? coll item)))
+
 (defn remove-nth
   [coll index]
   (cond
@@ -48,7 +56,7 @@
   [vect]
   (remove-nth vect (rand-int (count vect))))
 
-(defn select-random-rec
+(defn- select-random-rec
   [coll selected number]
   (if (or (not (pos? number))
           (empty? coll))
