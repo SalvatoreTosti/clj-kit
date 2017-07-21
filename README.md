@@ -1,20 +1,20 @@
 # clj-kit
+An extension of the standard Clojure functions, providing stuff that should just _be there_.
 
-FIXME: description
-
-## Installation
-
-Download from http://example.com/FIXME.
+[![Clojars Project](https://img.shields.io/clojars/v/org.clojars.salvatore-tosti/clj-kit.svg)](https://clojars.org/org.clojars.salvatore-tosti/clj-kit)  
 
 ## Usage
 
-FIXME: explanation
+The easiest way utilize clj-kit is to use [Leiningen](https://leiningen.org/) to generate a project, then add clj-kit as a dependency.  
 
-    $ java -jar clj-kit-0.1.0-standalone.jar [args]
+Then, include _clj-kit_ as a dependency in your project. Add Seesaw to project.clj  
 
-## Options
-
-FIXME: listing of options this app accepts.
+```clojure
+(defproject my-new-project "1.0.0-SNAPSHOT"
+  :description "My great new project."
+  :dependencies [[org.clojure/clojure "1.x.0"]
+                [clj-kit "x.y.z"]])
+```
 
 ## Examples
 
