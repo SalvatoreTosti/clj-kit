@@ -3,7 +3,7 @@
 # clj-kit
 [![Clojars Project](https://img.shields.io/clojars/v/org.clojars.salvatore-tosti/clj-kit.svg)](https://clojars.org/org.clojars.salvatore-tosti/clj-kit)  
 
-An extension of Clojure's standard function, providing stuff that should just _be there_.
+An extension of Clojure's standard functions, providing stuff that should just _be there_.
 
 ## Usage
 
@@ -16,27 +16,13 @@ The easiest way utilize _clj-kit_ is to use [Leiningen](https://leiningen.org/) 
                 [clj-kit "x.y.z"]])
 ```
 
-## Namespaces
+## Documentation
 
-### str-kit
-String related functions.
-* is-only-alpha?
-* contains-alpha?
-* is-lower?
-* is-upper?
-* is-integer?
-* is-double?
+You can find the [generated documentation](https://salvatoretosti.github.io/clj-kit/) at https://salvatoretosti.github.io/clj-kit/.
 
-### coll-kit
-Collection related functions.
-* coll-contains?
-* remove-nth
-* remove-random
-* select-random
-* split-nth
-* remove-random
-* rand-nth-keys
-* rand-nth-values
+### namespaces
+* **str-kit** - String related functions.
+* **coll-kit** - Collection related functions.
 
 ## License
 
