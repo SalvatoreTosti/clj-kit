@@ -2923,7 +2923,7 @@ net.brehaut.ClojureTools = (function (SH) {
 </td><td class="codes"><pre class="brush: clojure">(defn rand-nth-values
   [coll]
   (coll (rand-nth-keys coll)))</pre></td></tr><tr><td class="spacer docs">&nbsp;</td><td class="codes" /></tr><tr><td class="docs"><div class="docs-header"><a class="anchor" href="#clj-kit.string-kit" name="clj-kit.string-kit"><h1 class="project-name">clj-kit.string-kit</h1><a class="toc-link" href="#toc">toc</a></a></div></td><td class="codes" /></tr><tr><td class="docs">
-</td><td class="codes"><pre class="brush: clojure">(ns clj-kit.string-kit)</pre></td></tr><tr><td class="docs">
+</td><td class="codes"><pre class="brush: clojure">(ns clj-kit.string-kit)</pre></td></tr><tr><td class="docs"><p>Determines if a string only contains letters.</p>
 </td><td class="codes"><pre class="brush: clojure">(defn is-only-alpha?
   [st]
   (cond
@@ -2931,7 +2931,7 @@ net.brehaut.ClojureTools = (function (SH) {
    (empty? st) false
    :else
    (-&gt;&gt; (map #(Character/isLetter %) st)
-        (every? true?))))</pre></td></tr><tr><td class="docs">
+        (every? true?))))</pre></td></tr><tr><td class="docs"><p>Determines if a string contains at least 1 letter.</p>
 </td><td class="codes"><pre class="brush: clojure">(defn contains-alpha?
   [st]
   (cond
@@ -2941,7 +2941,7 @@ net.brehaut.ClojureTools = (function (SH) {
    (-&gt;&gt; (map #(Character/isLetter %) st)
         (some true?)
         (nil?)
-        (not))))</pre></td></tr><tr><td class="docs">
+        (not))))</pre></td></tr><tr><td class="docs"><p>Determines if all characters in a string are lowercase.</p>
 </td><td class="codes"><pre class="brush: clojure">(defn is-lower?
   [st]
   (cond
@@ -2949,7 +2949,7 @@ net.brehaut.ClojureTools = (function (SH) {
    (empty? st) false
    :else
    (-&gt;&gt; (map #(Character/isLowerCase %) st)
-        (every? true?))))</pre></td></tr><tr><td class="docs">
+        (every? true?))))</pre></td></tr><tr><td class="docs"><p>Determines if all characters in a string are uppercase.</p>
 </td><td class="codes"><pre class="brush: clojure">(defn is-upper?
   [st]
   (cond
@@ -2957,12 +2957,12 @@ net.brehaut.ClojureTools = (function (SH) {
    (empty? st) false
    :else
    (-&gt;&gt; (map #(if (Character/isLetter %) (Character/isUpperCase %) true) st)
-        (every? true?))))</pre></td></tr><tr><td class="docs">
+        (every? true?))))</pre></td></tr><tr><td class="docs"><p>Determines if a given string is an integer.</p>
 </td><td class="codes"><pre class="brush: clojure">(defn is-integer?
   [st]
   (try
     (when (Integer/parseInt st) true)
-    (catch Exception e false)))</pre></td></tr><tr><td class="docs">
+    (catch Exception e false)))</pre></td></tr><tr><td class="docs"><p>Determines if a given string is a double.</p>
 </td><td class="codes"><pre class="brush: clojure">(defn is-double?
   [st]
   (try
