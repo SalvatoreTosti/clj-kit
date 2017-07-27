@@ -18,7 +18,7 @@ The easiest way utilize _clj-kit_ is to use [Leiningen](https://leiningen.org/) 
 
 ## Documentation
 
-You can find the [generated documentation](https://salvatoretosti.github.io/clj-kit/) at https://salvatoretosti.github.io/clj-kit/.
+You can find the [generated documentation](https://github.com/gdeer81/lein-marginalia) at https://salvatoretosti.github.io/clj-kit/.
 
 ### namespaces
 * **str-kit** - String related functions.
