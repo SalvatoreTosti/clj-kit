@@ -1,7 +1,8 @@
 
 
 # clj-kit
-[![Clojars Project](https://img.shields.io/clojars/v/org.clojars.salvatore-tosti/clj-kit.svg)](https://clojars.org/org.clojars.salvatore-tosti/clj-kit)  
+[![Build Status](https://travis-ci.org/SalvatoreTosti/clj-kit.svg?branch=master)](https://travis-ci.org/SalvatoreTosti/clj-kit)  
+[![Clojars Project](https://img.shields.io/clojars/v/org.clojars.salvatore-tosti/clj-kit.svg)](https://clojars.org/org.clojars.salvatore-tosti/clj-kit)
 
 An extension of Clojure's standard functions, providing stuff that should just _be there_.
 
