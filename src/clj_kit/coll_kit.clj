@@ -1,12 +1,18 @@
 (ns clj-kit.coll-kit)
 
+(defn- nil-or-empty?-helper [arg]
+  (cond
+   (nil? arg) true
+   (or
+    (string? arg)
+    (coll? arg)) (or (nil? arg) (empty? arg))
+   :else false))
+
 (defn nil-or-empty?
   "Returns true if any supplied arguments are nil or empty."
   [& args]
-    (->> (map #(or (nil? %) (empty? %)) args)
-         (some true?)
-         (nil?)
-         (not)))
+    (->> (map nil-or-empty?-helper args)
+      (every? true?)))
 
 (defn coll-contains?
   "Returns true if element is present in given collection, acts like 'contains?' for list and vector."
